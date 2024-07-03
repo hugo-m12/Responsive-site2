@@ -4,6 +4,7 @@ body {
 
 .header {
   padding: 30px;
+  background-color: #f9f9fc;
 }
 .header .header-menu {
   display: flex;
@@ -37,4 +38,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.img-section h3 {
+  color: #5E3BEE;
+  font-weight: 400;
+}
+.img-section h1 {
+  margin: 0;
+  font-size: xxx-large;
+}
+.img-section .main-img {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: auto;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9fc;
+}
+
+.text-content {
+  flex-grow: 0;
+  padding: 70px;
+}
+.text-content .flex {
+  display: flex;
+  margin-top: 50px;
+}
+.text-content .contact-btn {
+  color: white;
+  background-color: #5E3BEE;
+  border-radius: 50px;
+  border-style: none;
+  width: 204px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: large;
+}
+.text-content .download-cv {
+  background-color: transparent;
+  border-style: none;
+  width: 204px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: large;
 }/*# sourceMappingURL=styles.css.map */
