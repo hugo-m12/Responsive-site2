@@ -145,22 +145,13 @@ body{
     }
     .main-img{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         max-width: 100%; 
         height: auto; 
     /* smartphone */
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
         display: none; 
     }
-    /* tablet - not working  TODO fix */
-    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
-        display: flex;
-        flex-direction: column;
-    .flex{
-        display: flex;
-        flex-direction: column;
-    }
-}
     }
 }
 
@@ -169,6 +160,11 @@ body{
     justify-content: space-between; 
     align-items: center; 
     background-color: $bgcolor;
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: flex;
+        flex-direction: column;
+}
 }
 
 .text-content {
@@ -177,6 +173,13 @@ body{
      //smartphone
      @media screen and (min-width: 0px) and (max-width: $smartphone) {
         text-align: center;
+    }
+    .text{
+        /* tablet */
+        @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+            text-align: center;
+            margin-right: 20px;
+        }
     }
     .flex{
      display: flex;
@@ -187,6 +190,12 @@ body{
         flex-direction: column; 
         justify-content: center;
         align-items: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: flex;
+        flex-direction: column; 
+        justify-content: right;
     }
     }
     .contact-btn{
@@ -266,6 +275,12 @@ body{
             color: $maincolor1;
             font-size: x-large;
         }
+        /* tablet */
+        @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+            flex-basis: calc(40% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+    }
     }
      //smartphone
      @media screen and (min-width: 0px) and (max-width: $smartphone) {
@@ -273,11 +288,11 @@ body{
         flex-direction: column;
         gap: 20px;
     }
-    /* tablet  not working TODO fix*/
+    /* tablet */
     @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }
 
