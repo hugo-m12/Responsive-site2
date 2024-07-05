@@ -40,18 +40,57 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .header .header-btn {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .header .header-btn {
+    display: none;
+  }
+}
+.header .menu-head {
+  /* tablet */
+}
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .header .menu-head {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .header .menu-head {
+    display: none;
+  }
+}
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .header .side-menu {
+    display: block;
+    scale: 2;
+  }
+  .header .side-menu .nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+  }
+  .header #side-menu:checked ~ .nav {
+    display: block !important;
+  }
+  .header .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .header .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .header .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .header .side-menu {
     display: block;
     scale: 2;
@@ -110,10 +149,21 @@ body {
   max-width: 100%;
   height: auto;
   /* smartphone */
+  /* tablet - not working  TODO fix */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .img-section .main-img {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .img-section .main-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-section .main-img .flex {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -206,6 +256,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  /* tablet  not working TODO fix*/
 }
 .info-section .info-rectangle {
   width: 376px;
@@ -229,11 +280,19 @@ body {
     gap: 20px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .info-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+}
 
 .middle-text2 {
   background-color: #f9f9fc;
   text-align: left;
   padding: 70px;
+  /* tablet */
 }
 .middle-text2 h1 {
   margin: 0;
@@ -265,11 +324,28 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .middle-text2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .m-image {
   display: none;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .m-image {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .m-image {
     display: flex;
     margin-top: 50px;
@@ -286,8 +362,14 @@ body {
 }
 .portfolio .head-lorem {
   text-align: right;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .portfolio .head-lorem {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .portfolio .head-lorem {
     text-align: center;
   }
@@ -295,8 +377,17 @@ body {
 .portfolio .row {
   display: flex;
   flex-wrap: wrap;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .portfolio .row {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .portfolio .row {
     text-align: center;
     display: flex;
@@ -311,8 +402,17 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .portfolio .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .portfolio .flex {
     display: flex;
     flex-direction: column;
@@ -351,8 +451,17 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .testimonials .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .testimonials .flex {
     display: flex;
     flex-direction: column;
@@ -438,8 +547,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .footer .footer-container {
     display: flex;
     flex-direction: column;
@@ -451,8 +568,15 @@ body {
 }
 .footer .contacts-container {
   margin: 80px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer .contacts-container {
+    padding: 0;
+    margin: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .footer .contacts-container {
     padding: 0;
     margin: 30px;
@@ -461,8 +585,14 @@ body {
 .footer .socials {
   display: flex;
   gap: 20px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer .socials {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .footer .socials {
     justify-content: center;
   }
@@ -475,8 +605,17 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 30px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer .header-menu {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .footer .header-menu {
     justify-content: center;
     display: flex;

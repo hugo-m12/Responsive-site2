@@ -49,15 +49,49 @@ body{
         @media screen and (min-width: 0px) and (max-width: $smartphone) {
             display: none; 
         }
+         /* tablet */
+        @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: none; 
+      }
     }
     .menu-head{
         //smartphone
         @media screen and (min-width: 0px) and (max-width: $smartphone) {
             display: none; 
         }
+        /* tablet */
+        @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+            display: none; 
+        }
     }
     //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        .side-menu{
+            display: block;
+            scale: 2;
+            .nav{
+                display: flex;
+                flex-direction: column;
+                background-color: #D9D9D9;
+            }
+        }
+        #side-menu:checked ~.nav {
+            display: block !important;
+        }
+        .side-menu:checked ~ .hamb .hamb-line {
+            background: transparent;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::before {
+            transform: rotate(-45deg);
+            top:0;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::after {
+            transform: rotate(45deg);
+            top:0;
+        }
+    }
+    //tablet
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         .side-menu{
             display: block;
             scale: 2;
@@ -117,7 +151,16 @@ body{
     /* smartphone */
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
         display: none; 
-        }
+    }
+    /* tablet - not working  TODO fix */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: flex;
+        flex-direction: column;
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+}
     }
 }
 
@@ -230,6 +273,12 @@ body{
         flex-direction: column;
         gap: 20px;
     }
+    /* tablet  not working TODO fix*/
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
 }
 
 .middle-text2{
@@ -265,12 +314,26 @@ body{
         display: flex;
         flex-direction: column;
     }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .m-image{
     display: none;
     //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         display: flex;
         margin-top: 50px;
         justify-content: center;
@@ -290,12 +353,23 @@ body{
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
         text-align: center;
     }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        text-align: center;
+    }
     }
     .row{
         display: flex;
         flex-wrap: wrap;
         //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -309,8 +383,15 @@ body{
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 20px;
-        //smartphone
+    //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -354,6 +435,13 @@ body{
         margin: 20px;
     //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -445,6 +533,12 @@ body{
         flex-direction: column;
         text-align: center;
     }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
     }
     background-color: #404040;
     color: white;
@@ -455,8 +549,13 @@ body{
 
     .contacts-container{
         margin: 80px;
-         //smartphone
+    //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        padding: 0;
+        margin: 30px;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         padding: 0;
         margin: 30px;
     }
@@ -467,6 +566,10 @@ body{
         gap: 20px;
     //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        justify-content: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         justify-content: center;
     }
     }
@@ -482,6 +585,13 @@ body{
         padding: 30px;
     //smartphone
     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    /* tablet */
+    @media screen and (min-width: $smartphone) and (max-width: $notebook) {
         justify-content: center;
         display: flex;
         flex-direction: column;
