@@ -45,13 +45,49 @@ body{
         justify-content: center; 
         align-items: center;
         cursor: pointer;
-    }
-    &:not(menu-head){
         //smartphone
         @media screen and (min-width: 0px) and (max-width: $smartphone) {
             display: none; 
         }
     }
+    .menu-head{
+        //smartphone
+        @media screen and (min-width: 0px) and (max-width: $smartphone) {
+            display: none; 
+        }
+    }
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        .side-menu{
+            display: block;
+            scale: 2;
+            .nav{
+                display: flex;
+                flex-direction: column;
+                background-color: #D9D9D9;
+            }
+        }
+        #side-menu:checked ~.nav {
+            display: block !important;
+        }
+        .side-menu:checked ~ .hamb .hamb-line {
+            background: transparent;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::before {
+            transform: rotate(-45deg);
+            top:0;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::after {
+            transform: rotate(45deg);
+            top:0;
+        }
+    }
+}
+.side-menu{
+    display: none;
+}
+.nav{
+    display: none;
 }
 
 .img-section{
