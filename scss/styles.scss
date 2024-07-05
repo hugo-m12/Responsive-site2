@@ -85,9 +85,19 @@ body{
 }
 .side-menu{
     display: none;
+    position: relative;
+    bottom: 40px;
+    left: 325px;
 }
 .nav{
     display: none;
+    background-color: #D9D9D9;
+    width: 450px;
+    height: 749px;
+    padding: 20px;
+}
+.nav ul.menu, .nav ul.menu li{
+    flex-direction: column;
 }
 
 .img-section{
