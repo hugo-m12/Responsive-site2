@@ -19,6 +19,7 @@ body{
             color: $maincolor1;
         }
     }
+    
     ul{
         list-style: none;
         display: flex;
@@ -45,6 +46,12 @@ body{
         align-items: center;
         cursor: pointer;
     }
+    &:not(menu-head){
+        //smartphone
+        @media screen and (min-width: 0px) and (max-width: $smartphone) {
+            display: none; 
+        }
+    }
 }
 
 .img-section{
@@ -61,6 +68,10 @@ body{
         flex-direction: row;
         max-width: 100%; 
         height: auto; 
+    /* smartphone */
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: none; 
+        }
     }
 }
 
@@ -74,10 +85,20 @@ body{
 .text-content {
     flex-grow: 0;
     padding: 70px;
-
+     //smartphone
+     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        text-align: center;
+    }
     .flex{
      display: flex;
      margin-top: 50px;
+     //smartphone
+     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
     }
     .contact-btn{
         color: white;
@@ -118,6 +139,12 @@ body{
             margin: 0;
             font-weight: 400;
         }
+        //smartphone
+        @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px;
+    }
 }
 
 .middle-text{
@@ -151,6 +178,12 @@ body{
             font-size: x-large;
         }
     }
+     //smartphone
+     @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .middle-text2{
@@ -178,9 +211,28 @@ body{
         cursor: pointer;
         font-size: large;
     }
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.m-image{
+    display: none;
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+    }
 }
 
 .portfolio{
+
     padding: 70px;
     h3{
         color: $maincolor1;
@@ -188,10 +240,21 @@ body{
     }
     .head-lorem{
         text-align: right;
+        //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        text-align: center;
+    }
     }
     .row{
         display: flex;
         flex-wrap: wrap;
+        //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     }
     .col-5{
         width: 50%;
@@ -200,6 +263,13 @@ body{
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 20px;
+        //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
     }
     .card{
         width: 583px;
@@ -236,6 +306,13 @@ body{
         display: flex;
         justify-content: center;
         margin: 20px;
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
     }
     .review-rectangle{
         width: 584px;
@@ -316,6 +393,12 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+ //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
     }
     background-color: #404040;
     color: white;
@@ -326,11 +409,20 @@ body{
 
     .contacts-container{
         margin: 80px;
+         //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        padding: 0;
+        margin: 30px;
+    }
     }
     
     .socials {
         display: flex;
         gap: 20px;
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        justify-content: center;
+    }
     }
 
     .flex{
@@ -342,6 +434,13 @@ body{
         display: flex;
         justify-content: space-between;
         padding: 30px;
+    //smartphone
+    @media screen and (min-width: 0px) and (max-width: $smartphone) {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
         ul{
             list-style: none;
             justify-content: space-around;
