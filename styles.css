@@ -173,10 +173,17 @@ body {
 .text-content {
   flex-grow: 0;
   padding: 70px;
+  /* tablet */
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .text-content {
     text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .text-content {
+    display: flex;
+    gap: 40px;
   }
 }
 .text-content .text {
@@ -205,7 +212,7 @@ body {
   .text-content .flex {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: end;
   }
 }
 .text-content .contact-btn {
